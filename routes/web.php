@@ -30,7 +30,7 @@ Route::middleware(['auth', 'role:administrador'])->group(function () {
   // Rutas para Usuarios
   Route::get('/lectores', [UsuarioController::class, 'lectores'])->name('usuarios.lectores');
   Route::get('/bibliotecarios', [UsuarioController::class, 'bibliotecarios'])->name('usuarios.bibliotecarios');
-  Route::get('/administradores', [UsuarioController::class, 'index'])->name('usuarios.index');
+  Route::get('/administradores', [UsuarioController::class, 'index'])->name('usuarios.administradores');
   Route::get('/home', [DashboardController::class, 'index'])->name('dashboard');
 });
 

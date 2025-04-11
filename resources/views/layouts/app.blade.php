@@ -99,7 +99,7 @@
             </a>
             <ul class="list-unstyled full-box">
               <li>
-                <a href="{{ route('usuarios.index') }}"
+                <a href="{{ route('usuarios.administradores') }}"
                   ><i class="zmdi zmdi-account zmdi-hc-fw"></i>
                   Administradores</a
                 >

@@ -14,7 +14,7 @@ class UsuarioController extends Controller
     */
     public function index(){
       $usuarios = Usuario::where('rol', 'administrador')->get();
-      return view('usuarios.index', compact('usuarios'));
+      return view('usuarios.administradores', compact('usuarios'));
     }
 
     public function bibliotecarios(){
