@@ -50,7 +50,6 @@ Route::middleware(['auth', 'role:bibliotecario,administrador'])->group(function 
   Route::put('/categorias/{categoria}', [CategoriaController::class, 'update'])->name('categorias.update');
   Route::delete('/categorias/{categoria}', [CategoriaController::class, 'destroy'])->name('categorias.destroy');
 
-
   // Rutas para Libros
   Route::get('/', [LibroController::class, 'index'])->name('home.libros.index');
   Route::get('/libros', [LibroController::class, 'index'])->name('libros.index');
