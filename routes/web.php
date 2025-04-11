@@ -30,7 +30,7 @@ Route::middleware(['auth', 'role:administrador'])->group(function () {
   Route::get('/lectores', [UsuarioController::class, 'lectores'])->name('usuarios.lectores');
   Route::get('/bibliotecarios', [UsuarioController::class, 'bibliotecarios'])->name('usuarios.bibliotecarios');
   Route::get('/administradores', [UsuarioController::class, 'index'])->name('usuarios.administradores');
-  Route::get('/home', [DashboardController::class, 'index'])->name('dashboard');
+  Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 });
 
 Route::middleware(['auth', 'role:bibliotecario,administrador'])->group(function (){
@@ -51,7 +51,7 @@ Route::middleware(['auth', 'role:bibliotecario,administrador'])->group(function 
   Route::delete('/categorias/{categoria}', [CategoriaController::class, 'destroy'])->name('categorias.destroy');
 
   // Rutas para Libros
-  Route::get('/', [LibroController::class, 'index'])->name('home.libros.index');
+  Route::get('/libros', [LibroController::class, 'index'])->name('libros.index');
   Route::get('/libros', [LibroController::class, 'index'])->name('libros.index');
   Route::get('/libros/create', [LibroController::class, 'create'])->name('libros.create');
   Route::post('/libros', [LibroController::class, 'store'])->name('libros.store');
