@@ -53,7 +53,7 @@ Route::middleware(['auth', 'role:bibliotecario,administrador'])->group(function 
 
 
   // Rutas para Libros
-  Route::get('/', [LibroController::class, 'index'])->name('libros.index');
+  Route::get('/', [LibroController::class, 'index'])->name('home.libros.index');
   Route::get('/libros', [LibroController::class, 'index'])->name('libros.index');
   Route::get('/libros/create', [LibroController::class, 'create'])->name('libros.create');
   Route::post('/libros', [LibroController::class, 'store'])->name('libros.store');
